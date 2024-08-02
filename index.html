@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Welcome to Shomrei Hachomos Orthodox Chapel, Inc.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="css/nate.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- MapQuest SDK -->
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=Xp4GD8MzUnHE8nOBNGvfxvA9i9g0NoKs"></script>
+    <link rel="stylesheet" href="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.css">
+</head>
+<body>
+    <div id="wrapper">
+       
+			<!-- Header -->
+<header>
+    <h1 onclick="showContent('home')">Shomrei Hachomos</h1>
+    <!-- Navigation -->
+    <nav>
+        <ul id="navlinks">
+            <li><a href="#" onclick="showContent('office')">Office</a></li>
+            <li><a href="#" onclick="showContent('about-us')">About Us</a></li>
+            <li><a href="#" onclick="showContent('missaskim')">Missaskim</a></li>
+            <li><a href="#" onclick="showContent('directions')">Directions to Cemetery</a></li>
+        </ul>
+    </nav>
+</header>
+
+		<!-- Content Section -->
+    <div id="content">
+        <!-- Dynamic content will be loaded here -->
+    </div>
+		
+        <!-- Hero Section -->
+        <div id="hero">
+            <img src="images/hebrew.logo.png" alt="Hebrew logo">
+            <p>Welcome to Shomrei Hachomos Orthodox Chapel, Inc.</p>
+        </div>
+
+        <!-- Main Content -->
+        <section id="home" class="active">
+            <main>
+                <p>We understand the profound loss you are experiencing and are here to support you with compassion and care. We appreciate you entrusting us with the honor of serving your family during this difficult time. Our dedicated team is committed to providing a comforting environment and personalized services to honor your loved one’s memory while adhering to Orthodox Jewish traditions and rituals in our modern, clean facility.</p>
+                <img src="images/shoc.logo.png" alt="logo" class="responsive-logo">
+                <p>To help us understand your needs and provide the best possible service, please take a moment to fill out our intake form. This will allow us to assist you more effectively and ensure that every detail is handled with the utmost care and respect.</p>
+            </main>
+        </section>
+
+        <!-- Office Section -->
+        <section id="office" style="display:none;">
+            <main>
+                <h2>Office</h2>
+                <form>
+                    <label for="niftar-name">Name of Niftar:</label>
+                    <input type="text" id="niftar-name" name="niftar-name" required><br><br>
+
+                    <label for="cemetery-name">Cemetery Name:</label>
+                    <input type="text" id="cemetery-name" name="cemetery-name" required><br><br>
+
+                    <label for="start-time">Anticipated Start Time:</label>
+                    <input type="time" id="start-time" name="start-time" required><br><br>
+
+                    <label for="work-letter">Do you need a letter for work?</label>
+                    <input type="checkbox" id="work-letter" name="work-letter" onclick="toggleWorkLetter()"><br><br>
+
+                    <div id="work-letter-details" style="display:none;">
+                        <label for="employee-name">Employee Name:</label>
+                        <input type="text" id="employee-name" name="employee-name"><br><br>
+
+                        <label for="employee-email">Employee Email:</label>
+                        <input type="email" id="employee-email" name="employee-email"><br><br>
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </main>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about-us" style="display:none;">
+            <main id="about-us-content"></main>
+        </section>
+
+        <!-- Missaskim Section -->
+        <section id="missaskim" style="display:none;">
+            <main>
+                <h2>Missaskim</h2>
+                <p>Information about Missaskim.</p>
+            </main>
+        </section>
+
+        <!-- Directions Section -->
+        <section id="directions" style="display:none;">
+            <main>
+                <h2>Directions to Cemetery</h2>
+                <div id="map" style="height: 500px;"></div>
+            </main>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© Copyright 2024 Shomrei Hachomos Orthodox Chapels Inc.</p>
+            <p>Designed by Debbie Glazer LLC</p>
+            <p>Content by The Catholic Shteibel</p>
+        </footer>
+    </div>
+
+    <!-- Including JavaScript file -->
+    
+	 <script src="show.js"></script>
+</body>
+</html>

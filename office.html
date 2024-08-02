@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Office</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="css/nate.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Header -->
+        <header>
+            <h1 onclick="window.location.href='index.html'">Shomrei Hachomos</h1>
+            <!-- Navigation -->
+            <nav>
+                <ul id="navlinks">
+                    <li><a href="office.html">Office</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="missaskim.html">Missaskim</a></li>
+                    <li><a href="driving.html">Directions to Cemetery</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <section id="office" class="active">
+            <main>
+                <h2>Office</h2>
+                <form id="office-form">
+                    <label for="niftar-name">Name of Niftar:</label>
+                    <input type="text" id="niftar-name" name="niftar-name" required>
+
+                    <label for="cemetery-name">Cemetery Name:</label>
+                    <input type="text" id="cemetery-name" name="cemetery-name" required>
+
+                    <label for="burial-time">Anticipated Start Time:</label>
+                    <input type="time" id="burial-time" name="burial-time" required>
+
+                    <label for="work-letter">Do you need a letter for work?</label>
+                    <input type="checkbox" id="work-letter" name="work-letter" onchange="toggleWorkLetterDetails()">
+
+                    <div id="work-letter-details" style="display: none;">
+                        <label for="employee-name">Employee Name:</label>
+                        <input type="text" id="employee-name" name="employee-name">
+
+                        <label for="employee-email">Employee Email:</label>
+                        <input type="email" id="employee-email" name="employee-email">
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </main>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© Copyright 2024 Shomrei Hachomos Orthodox Chapels Inc.</p>
+            <p>Designed by Debbie Glazer LLC</p>
+        </footer>
+    </div>
+
+    <!-- Including JavaScript file -->
+    <script>
+        function toggleWorkLetterDetails() {
+            var checkBox = document.getElementById('work-letter');
+            var details = document.getElementById('work-letter-details');
+            if (checkBox.checked == true) {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="css/nate.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+</body>
+</html>
