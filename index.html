@@ -6,32 +6,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600&display=swap" rel="stylesheet">
     <link href="css/nate.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- MapQuest SDK -->
-    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=Xp4GD8MzUnHE8nOBNGvfxvA9i9g0NoKs"></script>
+    <title>Shomrei Hachomos</title>
+
+    <!-- Include Leaflet CSS from CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" crossorigin=""/>
+
+    <!-- Include MapQuest CSS from CDN -->
     <link rel="stylesheet" href="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.css">
 </head>
 <body>
     <div id="wrapper">
-       
-			<!-- Header -->
-<header>
-    <h1 onclick="showContent('home')">Shomrei Hachomos</h1>
-    <!-- Navigation -->
-    <nav>
-        <ul id="navlinks">
-            <li><a href="#" onclick="showContent('office')">Office</a></li>
-            <li><a href="#" onclick="showContent('about-us')">About Us</a></li>
-            <li><a href="#" onclick="showContent('missaskim')">Missaskim</a></li>
-            <li><a href="#" onclick="showContent('directions')">Directions to Cemetery</a></li>
-        </ul>
-    </nav>
-</header>
+        <!-- Header -->
+        <header>
+            <h1 onclick="showContent('home')">Shomrei Hachomos</h1>
+            <!-- Navigation -->
+            <nav>
+                <ul id="navlinks">
+                    <li><a href="#" onclick="showContent('office')">Office</a></li>
+                    <li><a href="#" onclick="showContent('about-us')">About Us</a></li>
+                    <li><a href="#" onclick="showContent('directions')">Directions to Cemetery</a></li>
+                </ul>
+            </nav>
+        </header>
 
-		<!-- Content Section -->
-    <div id="content">
-        <!-- Dynamic content will be loaded here -->
-    </div>
-		
+        <!-- Content Section -->
+        <div id="content">
+            <!-- Dynamic content will be loaded here -->
+        </div>
+
         <!-- Hero Section -->
         <div id="hero">
             <img src="images/hebrew.logo.png" alt="Hebrew logo">
@@ -82,14 +84,6 @@
             <main id="about-us-content"></main>
         </section>
 
-        <!-- Missaskim Section -->
-        <section id="missaskim" style="display:none;">
-            <main>
-                <h2>Missaskim</h2>
-                <p>Information about Missaskim.</p>
-            </main>
-        </section>
-
         <!-- Directions Section -->
         <section id="directions" style="display:none;">
             <main>
@@ -106,8 +100,13 @@
         </footer>
     </div>
 
-    <!-- Including JavaScript file -->
+    <!-- Include Leaflet JavaScript from CDN -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin=""></script>
     
-	 <script src="show.js"></script>
+    <!-- Include MapQuest SDK -->
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=Xp4GD8MzUnHE8nOBNGvfxvA9i9g0NoKs"></script>
+
+    <!-- Include JavaScript file -->
+    <script src="js/show.js"></script>
 </body>
 </html>

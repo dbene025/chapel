@@ -4,7 +4,7 @@ function showContent(page) {
 
     switch(page) {
         case 'home':
-            pageUrl = 'home.html';
+            pageUrl = 'index.html';
             break;
         case 'office':
             pageUrl = 'office.html';
@@ -19,25 +19,21 @@ function showContent(page) {
             pageUrl = 'directions.html';
             break;
         default:
-            pageUrl = 'home.html';
+            pageUrl = 'index.html';
             break;
     }
 
-    // Fetch the content from the specified URL
     fetch(pageUrl)
         .then(response => {
-            // Check if the response is ok (status in the range 200-299)
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
             }
             return response.text();
         })
         .then(data => {
-            // Inject the fetched content into the content div
             document.getElementById('content').innerHTML = data;
         })
         .catch(error => {
-            // Log any errors to the console
-            console.error('Error loading page:', error);
+            console.error('Error loading page:', error); // This line can be removed if console errors are not allowed by linter
         });
 }
